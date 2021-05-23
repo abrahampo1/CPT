@@ -22,7 +22,7 @@ use Symfony\Component\HttpClient\HttpClient;
 <form name="buscaTarxetaForm" id="buscaTarxetaForm" method="post" action="">
     <div class="error"> </div>
     <div style="float:left; vertical-align: middle;">
-        <div style="float:left;vertical-align: middle;"> <label for="numero"> <strong>Número de Tarxeta:&nbsp;</strong> </label> </div>
+        <div style="float:left;vertical-align: middle; text-align:center"> <label for="numero"> <strong>Número de Tarxeta:&nbsp;</strong> </label> </div>
         <div style="float:left"> <input type="text" name="numero" maxlength="16" size="20" value="9870200103354001" class=""> </div>
     </div>
     <p> <input type="submit" value="Buscar"></p>
