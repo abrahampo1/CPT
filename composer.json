@@ -1,0 +1,6 @@
+{
+    "require": {
+        "symfony/http-client": "^5.2",
+        "soundasleep/html2text": "^1.1"
+    }
+}
