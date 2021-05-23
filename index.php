@@ -106,7 +106,7 @@ if (isset($_POST["numero"])) {
     echo "Recargas cobradas: " . $recargas_cobradas_total[1];
     $recargas_caducadas_total = explode("</strong>", $fila[3]);
     echo "Recargas caducadas: " . $recargas_caducadas_total[1];
-    if (strstr($contenido_descartado[$scrap], 'Recargas penden')) {
+    if (strstr($contenido_descartado[$scrap], 'Recargas pendentes')) {
         $fila = explode("<p>", $contenido_descartado[$scrap]);
         $recargas_pendientes_euros = explode("</strong>", $fila[1]);
         $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
