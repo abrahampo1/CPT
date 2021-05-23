@@ -39,7 +39,7 @@ function setkey(key){
 window.onload = function(){
     miStorage = window.localStorage;
     var txn = localStorage.getItem('txn');
-    if(txn){
+    if(typeof txn !== 'undefined'){
         document.getElementById("txn").value = tnx;
         document.getElementById("txn_btn").value = txn;
         document.getElementById("txn_div").style.display = block;
