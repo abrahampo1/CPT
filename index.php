@@ -67,6 +67,10 @@ use Symfony\Component\HttpClient\HttpClient;
     </div>
     <p> <input class="submit_btn" type="submit" value="Buscar"></p>
 </form>
+<form action="" method="POST" id="txn_div" style="display: none;">
+    <input type="hidden" id="txn" name="numero" value="">
+    <input class="submit_btn" id="txn_btn" type="submit" value="">
+</form>
 <?php
 if (isset($_POST["numero"])) {
     $hora = time();
@@ -91,15 +95,15 @@ if (isset($_POST["numero"])) {
     if (strstr($contenido_descartado[0], $err_no_data)) {
         echo "<p class='error'>Esta tarjetiña no tiene datos :(</p>";
         exit;
-    } else {
-?>
-
-<?php
     }
 
     if ($error_data === true) {
     }
     $scrap = 2;
+    echo '<script type="text/javascript">',
+     'setkey('.$numero_tratado.');',
+     '</script>'
+;
     $recargas_pendientes_total = explode("</strong>", $fila[1]);
     echo "<hr>Recargas pendientes: " . $recargas_pendientes_total[1];
     $recargas_cobradas_total = explode("</strong>", $fila[2]);
@@ -161,3 +165,20 @@ if (isset($_POST["numero"])) {
 
 
 ?>
+
+<script>
+function setkey(key){
+    miStorage = window.localStorage;
+    localStorage.setItem('txn', key);
+}
+window.onload = function(){
+    miStorage = window.localStorage;
+    var txn = localStorage.getItem('txn');
+    if(txn){
+        document.getElementById("txn").value = tnx;
+        document.getElementById("txn_btn").value = txn;
+        document.getElementById("txn_div").style.display = block;
+    }
+}
+
+</script>
