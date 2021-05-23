@@ -99,13 +99,15 @@ if (isset($_POST["numero"])) {
 
     if ($error_data === true) {
     }
+    $i = 2;
     $recargas_pendientes_total = explode("</strong>", $fila[1]);
     echo "<hr>Recargas pendientes: " . $recargas_pendientes_total[1];
     $recargas_cobradas_total = explode("</strong>", $fila[2]);
     echo "Recargas cobradas: " . $recargas_cobradas_total[1];
     $recargas_caducadas_total = explode("</strong>", $fila[3]);
     echo "Recargas caducadas: " . $recargas_caducadas_total[1];
-    $fila = explode("<p>", $contenido_descartado[2]);
+    if (strstr($contenido_descartado[$i], 'Recargas pendentes')) {
+    $fila = explode("<p>", $contenido_descartado[$i]);
     $recargas_pendientes_euros = explode("</strong>", $fila[1]);
     $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
     $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
@@ -119,7 +121,9 @@ if (isset($_POST["numero"])) {
         $datos = explode("", $tabla_pendientes[$i]);
         echo "€" . $datos[0] .  $datos[1] . "<br>";
     }
-
+    $i++;
+    }
+    if (strstr($contenido_descartado[$i], 'Recargas cobradas')) {
     $fila = explode("<p>", $contenido_descartado[3]);
     $recargas_pendientes_euros = explode("</strong>", $fila[1]);
     $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
@@ -134,7 +138,9 @@ if (isset($_POST["numero"])) {
         $datos = explode("", $tabla_pendientes[$i]);
         echo "€" . $datos[0] .  $datos[1] . "<br>";
     }
-
+    $i++;
+    }
+    if (strstr($contenido_descartado[$i], 'Recargas caducadas')) {
     $fila = explode("<p>", $contenido_descartado[4]);
     $recargas_pendientes_euros = explode("</strong>", $fila[1]);
     $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
@@ -149,6 +155,8 @@ if (isset($_POST["numero"])) {
         $datos = explode("", $tabla_pendientes[$i]);
         echo "€" . $datos[0] .  $datos[1] . "<br>";
     }
+    $i++;
+}
 }
 
 
