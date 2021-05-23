@@ -121,7 +121,6 @@ if (isset($_POST["numero"])) {
             $datos = explode("", $tabla_pendientes[$i]);
             echo "€" . $datos[0] .  $datos[1] . "<br>";
         }
-        echo $scrap;
         $scrap++;
     }
     if (strstr($contenido_descartado[$scrap], 'Recargas cobradas')) {
@@ -138,7 +137,7 @@ if (isset($_POST["numero"])) {
         for ($i = 1; $i < count($tabla_pendientes); $i++) {
             $datos = explode("", $tabla_pendientes[$i]);
             echo "€" . $datos[0] .  $datos[1] . "<br>";
-        }echo $scrap;
+        }
         $scrap++;
     }
     if (strstr($contenido_descartado[$scrap], 'Recargas caducadas')) {
@@ -155,7 +154,7 @@ if (isset($_POST["numero"])) {
         for ($i = 1; $i < count($tabla_pendientes); $i++) {
             $datos = explode("", $tabla_pendientes[$i]);
             echo "€" . $datos[0] .  $datos[1] . "<br>";
-        }echo $scrap;
+        }
         $scrap++;
     }
 }
