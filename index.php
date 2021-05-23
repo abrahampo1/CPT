@@ -41,7 +41,7 @@ use Symfony\Component\HttpClient\HttpClient;
 <form name="buscaTarxetaForm" id="buscaTarxetaForm" method="post" action="" style="text-align: center;">
     <div style=" vertical-align: middle;">
         <label for="numero" style="font-size: 40px;">Número de Tarxeta</label> <br>
-        <input style="font-size: 30px;" type="text" name="numero" size="20" width="100%" value="9870200103354001" class="">
+        <input style="font-size: 30px;" type="text" name="numero" size="20" width="100%" value="" placeholder="Escribe o número aqui" class="">
     </div>
     <p> <input class="submit_btn" type="submit" value="Buscar"></p>
 </form>
