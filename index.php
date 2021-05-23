@@ -139,7 +139,8 @@ if (isset($_POST["numero"])) {
         echo "<hr>";
         for ($i = 1; $i < count($tabla_pendientes); $i++) {
             $datos = explode("", $tabla_pendientes[$i]);
-            echo "€" . $datos[0] .  $datos[1] . "<br>";
+            $dinero = str_replace(" ", "", $datos[0]);
+            echo  $dinero."€ " .  $datos[1] . "<br>";
         }
         $scrap++;
     }
@@ -156,7 +157,8 @@ if (isset($_POST["numero"])) {
         echo "<hr>";
         for ($i = 1; $i < count($tabla_pendientes); $i++) {
             $datos = explode("", $tabla_pendientes[$i]);
-            echo "€" . $datos[0] .  $datos[1] . "<br>";
+            $dinero = str_replace(" ", "", $datos[0]);
+            echo  $dinero."€ " .  $datos[1] . "<br>";
         }
         $scrap++;
     }
@@ -173,7 +175,8 @@ if (isset($_POST["numero"])) {
         echo "<hr>";
         for ($i = 1; $i < count($tabla_pendientes); $i++) {
             $datos = explode("", $tabla_pendientes[$i]);
-            echo "€" . $datos[0] .  $datos[1] . "<br>";
+            $dinero = str_replace(" ", "", $datos[0]);
+            echo  $dinero."€ " .  $datos[1] . "<br>";
         }
         $scrap++;
     }
