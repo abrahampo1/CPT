@@ -31,7 +31,8 @@ use Symfony\Component\HttpClient\HttpClient;
         display: inline-block;
         -webkit-appearance: none;
     }
-    .error{
+
+    .error {
         color: #DA0B0B;
     }
 </style>
@@ -69,6 +70,10 @@ if (isset($_POST["numero"])) {
     if (strstr($contenido_descartado[0], $err_no_data)) {
         echo "<p class='error'>Esta tarjetiña no tiene datos :(</p>";
         exit;
+    } else {
+?>
+       
+<?php
     }
 
     if ($error_data === true) {
@@ -124,3 +129,6 @@ if (isset($_POST["numero"])) {
         echo "€" . $datos[0] .  $datos[1] . "<br>";
     }
 }
+
+
+?>
