@@ -107,56 +107,57 @@ if (isset($_POST["numero"])) {
     $recargas_caducadas_total = explode("</strong>", $fila[3]);
     echo "Recargas caducadas: " . $recargas_caducadas_total[1];
     if (strstr($contenido_descartado[$scrap], 'Recargas pendentes')) {
-    $fila = explode("<p>", $contenido_descartado[$scrap]);
-    $recargas_pendientes_euros = explode("</strong>", $fila[1]);
-    $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
-    $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
-    echo "<hr>Dinero pendiente: " . $euros_pendientes;
-    $recargas_pendientes = explode("</strong>", $fila[1]);
-    $recargas_pendientes = explode("Data caducidade", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
-    $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
+        $fila = explode("<p>", $contenido_descartado[$scrap]);
+        $recargas_pendientes_euros = explode("</strong>", $fila[1]);
+        $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
+        $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
+        echo "<hr>Dinero pendiente: " . $euros_pendientes;
+        $recargas_pendientes = explode("</strong>", $fila[1]);
+        $recargas_pendientes = explode("Data caducidade", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
+        $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
 
-    echo "<hr>";
-    for ($i = 1; $i < count($tabla_pendientes); $i++) {
-        $datos = explode("", $tabla_pendientes[$i]);
-        echo "€" . $datos[0] .  $datos[1] . "<br>";
-    }
-    $scrap++;
+        echo "<hr>";
+        for ($i = 1; $i < count($tabla_pendientes); $i++) {
+            $datos = explode("", $tabla_pendientes[$i]);
+            echo "€" . $datos[0] .  $datos[1] . "<br>";
+        }
+        echo $scrap;
+        $scrap++;
     }
     if (strstr($contenido_descartado[$scrap], 'Recargas cobradas')) {
-    $fila = explode("<p>", $contenido_descartado[$scrap]);
-    $recargas_pendientes_euros = explode("</strong>", $fila[1]);
-    $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
-    $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
-    echo "<hr>Dinero cobrado: " . $euros_pendientes;
-    $recargas_pendientes = explode("</strong>", $fila[1]);
-    $recargas_pendientes = explode("Data ingreso", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
-    $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
+        $fila = explode("<p>", $contenido_descartado[$scrap]);
+        $recargas_pendientes_euros = explode("</strong>", $fila[1]);
+        $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
+        $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
+        echo "<hr>Dinero cobrado: " . $euros_pendientes;
+        $recargas_pendientes = explode("</strong>", $fila[1]);
+        $recargas_pendientes = explode("Data ingreso", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
+        $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
 
-    echo "<hr>";
-    for ($i = 1; $i < count($tabla_pendientes); $i++) {
-        $datos = explode("", $tabla_pendientes[$i]);
-        echo "€" . $datos[0] .  $datos[1] . "<br>";
-    }
-    $scrap++;
+        echo "<hr>";
+        for ($i = 1; $i < count($tabla_pendientes); $i++) {
+            $datos = explode("", $tabla_pendientes[$i]);
+            echo "€" . $datos[0] .  $datos[1] . "<br>";
+        }echo $scrap;
+        $scrap++;
     }
     if (strstr($contenido_descartado[$scrap], 'Recargas caducadas')) {
-    $fila = explode("<p>", $contenido_descartado[$scrap]);
-    $recargas_pendientes_euros = explode("</strong>", $fila[1]);
-    $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
-    $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
-    echo "<hr>Dinero caducado: " . $euros_pendientes;
-    $recargas_pendientes = explode("</strong>", $fila[1]);
-    $recargas_pendientes = explode("Data caducidade", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
-    $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
+        $fila = explode("<p>", $contenido_descartado[$scrap]);
+        $recargas_pendientes_euros = explode("</strong>", $fila[1]);
+        $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
+        $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
+        echo "<hr>Dinero caducado: " . $euros_pendientes;
+        $recargas_pendientes = explode("</strong>", $fila[1]);
+        $recargas_pendientes = explode("Data caducidade", $text = \Soundasleep\Html2Text::convert($recargas_pendientes[1]));
+        $tabla_pendientes = explode("\n", $recargas_pendientes[1]);
 
-    echo "<hr>";
-    for ($i = 1; $i < count($tabla_pendientes); $i++) {
-        $datos = explode("", $tabla_pendientes[$i]);
-        echo "€" . $datos[0] .  $datos[1] . "<br>";
+        echo "<hr>";
+        for ($i = 1; $i < count($tabla_pendientes); $i++) {
+            $datos = explode("", $tabla_pendientes[$i]);
+            echo "€" . $datos[0] .  $datos[1] . "<br>";
+        }echo $scrap;
+        $scrap++;
     }
-    $scrap++;
-}
 }
 
 
