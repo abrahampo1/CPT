@@ -124,7 +124,7 @@ if (isset($_POST["numero"])) {
     $i++;
     }
     if (strstr($contenido_descartado[$i], 'Recargas cobradas')) {
-    $fila = explode("<p>", $contenido_descartado[3]);
+    $fila = explode("<p>", $contenido_descartado[$i]);
     $recargas_pendientes_euros = explode("</strong>", $fila[1]);
     $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
     $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
@@ -141,7 +141,7 @@ if (isset($_POST["numero"])) {
     $i++;
     }
     if (strstr($contenido_descartado[$i], 'Recargas caducadas')) {
-    $fila = explode("<p>", $contenido_descartado[4]);
+    $fila = explode("<p>", $contenido_descartado[$i]);
     $recargas_pendientes_euros = explode("</strong>", $fila[1]);
     $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
     $euros_pendientes = str_replace(" ", "€", $euros_recarga_pendientes[1]);
