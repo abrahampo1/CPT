@@ -99,14 +99,14 @@ if (isset($_POST["numero"])) {
 
     if ($error_data === true) {
     }
-    $scrap = 1;
+    $scrap = 2;
     $recargas_pendientes_total = explode("</strong>", $fila[1]);
     echo "<hr>Recargas pendientes: " . $recargas_pendientes_total[1];
     $recargas_cobradas_total = explode("</strong>", $fila[2]);
     echo "Recargas cobradas: " . $recargas_cobradas_total[1];
     $recargas_caducadas_total = explode("</strong>", $fila[3]);
     echo "Recargas caducadas: " . $recargas_caducadas_total[1];
-    if (strstr($contenido_descartado[$scrap], 'Recargas pendentes')) {
+    if (strstr($contenido_descartado[$scrap], 'Recargas penden')) {
         $fila = explode("<p>", $contenido_descartado[$scrap]);
         $recargas_pendientes_euros = explode("</strong>", $fila[1]);
         $euros_recarga_pendientes = explode(":", $recargas_pendientes_euros[0]);
