@@ -79,11 +79,10 @@ function setkey(key){
 window.onload = function(){
     miStorage = window.localStorage;
     var txn = localStorage.getItem('txn');
-    alert(txn);
     if(localStorage.hasOwnProperty('txn')){
-        document.getElementById("txn").value = tnx;
+        document.getElementById("txn").value = txn;
         document.getElementById("txn_btn").value = txn;
-        document.getElementById("txn_div").style.display = block;
+        document.getElementById("txn_div").style.display = "block";
     }
 }
 
