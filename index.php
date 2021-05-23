@@ -31,7 +31,22 @@ use Symfony\Component\HttpClient\HttpClient;
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
 </head>
+<script>
+function setkey(key){
+    miStorage = window.localStorage;
+    localStorage.setItem('txn', key);
+}
+window.onload = function(){
+    miStorage = window.localStorage;
+    var txn = localStorage.getItem('txn');
+    if(txn){
+        document.getElementById("txn").value = tnx;
+        document.getElementById("txn_btn").value = txn;
+        document.getElementById("txn_div").style.display = block;
+    }
+}
 
+</script>
 <style>
     * {
         font-family: 'Pattaya', sans-serif;
@@ -166,19 +181,3 @@ if (isset($_POST["numero"])) {
 
 ?>
 
-<script>
-function setkey(key){
-    miStorage = window.localStorage;
-    localStorage.setItem('txn', key);
-}
-window.onload = function(){
-    miStorage = window.localStorage;
-    var txn = localStorage.getItem('txn');
-    if(txn){
-        document.getElementById("txn").value = tnx;
-        document.getElementById("txn_btn").value = txn;
-        document.getElementById("txn_div").style.display = block;
-    }
-}
-
-</script>
