@@ -99,7 +99,7 @@ if (isset($_POST["numero"])) {
 
     if ($error_data === true) {
     }
-    $scrap = 2;
+    $scrap = 1;
     $recargas_pendientes_total = explode("</strong>", $fila[1]);
     echo "<hr>Recargas pendientes: " . $recargas_pendientes_total[1];
     $recargas_cobradas_total = explode("</strong>", $fila[2]);
