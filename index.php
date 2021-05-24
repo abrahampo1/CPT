@@ -40,6 +40,7 @@
         font-family: 'Montserrat', sans-serif;
         font-size: 20px;
         text-align: center;
+        
     }
 
     .submit_btn {
@@ -61,7 +62,7 @@
     }
 
     .navbar {
-        background-color: #B8D4E3;
+        background-color: #8AB8D0;
         height: 60px;
         margin: -5;
         margin-top: -8;
@@ -69,7 +70,6 @@
         margin-right: -8;
         margin-bottom: 30px;
     }
-
     .navbar div img {
         height: 100%;
         margin-top: 0;
@@ -152,6 +152,9 @@
             opacity: 1;
         }
     }
+    body{
+        background-color: #8AB8D0;
+    }
 </style>
 
 <nav class="navbar">
@@ -159,7 +162,8 @@
         <img src="logo.png" alt="">
     </div>
 </nav>
-
+<body>
+    
 <form name="buscaTarxetaForm" id="buscaTarxetaForm" method="post" action="" style="text-align: center;">
     <div style=" vertical-align: middle;">
         <label for="numero" style="font-size: 40px;">Número de Tarxeta</label> <br>
@@ -174,6 +178,8 @@
 <div id="contenido">
 
 </div>
+
+</body>
 <script>
     function setkey(key) {
         miStorage = window.localStorage;
