@@ -120,6 +120,7 @@ use Symfony\Component\HttpClient\HttpClient;
     .tabla-datos{
         position: relative;
         background-color: #B8D4E3;
+        font-size: 15px;
         border-radius: 0px 0px 30px 30px;
         padding: 5px;
         margin: 10px;
