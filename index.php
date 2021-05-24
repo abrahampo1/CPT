@@ -31,7 +31,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="mobile-web-app-capable" content="yes" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="default-translucent" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 </head>
 
 <style>
@@ -197,6 +197,7 @@
 </script>
 <script>
     function search(num) {
+        setkey(num);
         document.getElementById("contenido").innerHTML = "<img src='loading.gif'>";
         $.ajax({
             type: 'post',
