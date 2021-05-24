@@ -167,7 +167,7 @@
 <form name="buscaTarxetaForm" id="buscaTarxetaForm" method="post" action="" style="text-align: center;">
     <div style=" vertical-align: middle;">
         <label for="numero" style="font-size: 40px;">Número de Tarxeta</label> <br>
-        <input style="font-size: 30px;" type="text" name="numero" value="" placeholder="Escribe o número aqui" class="">
+        <input style="font-size: 30px;" type="text" name="numero" value="" placeholder="Escribe o número aqui">
     </div>
     <p> <input class="submit_btn" type="submit" value="Buscar"></p>
 </form>
