@@ -190,6 +190,7 @@ if (isset($_POST["numero"])) {
 <script>
     if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
+    document.documentElement.requestFullscreen({ navigationUI: 'hide' });
     navigator.serviceWorker.register('pwabuilder-sw/pwabuilder-sw.js');
   });
 }
