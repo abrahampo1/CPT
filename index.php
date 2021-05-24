@@ -196,3 +196,11 @@ import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
 const el = document.createElement('pwa-update');
 document.body.appendChild(el);
 </script>
+
+<script>
+    if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('pwabuilder-sw/pwabuilder-sw.js');
+  });
+}
+</script>
