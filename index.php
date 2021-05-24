@@ -120,6 +120,7 @@ use Symfony\Component\HttpClient\HttpClient;
         border-radius: 0px 0px 30px 30px;
         padding: 5px;
         margin: 10px;
+        margin-left: 0px;
         width: 80%;
         left: 50%;
         margin-top: -10px;
