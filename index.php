@@ -66,6 +66,7 @@ use Symfony\Component\HttpClient\HttpClient;
         margin: -5;
         margin-top: -8;
         margin-left: -8;
+        margin-right: -8;
         margin-bottom: 30px;
     }
 
