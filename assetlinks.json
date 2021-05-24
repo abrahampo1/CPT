@@ -1,0 +1,5 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target" : { "namespace": "android_app", "package_name": "es.cpsoftware.tmg.twa",
+                   "sha256_cert_fingerprints": ["53:55:A3:A5:82:0B:83:5B:32:78:37:B3:A0:A6:FF:FC:6A:CD:09:36:60:42:8B:23:E0:22:1C:24:C0:DF:9D:72"] }
+    }]
