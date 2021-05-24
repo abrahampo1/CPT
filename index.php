@@ -216,9 +216,11 @@
 </script>
 <?php
 if (isset($_POST["numero"])) {
+    
     if (strlen($_POST["numero"]) > 10) {
+        $num_arreglado = str_replace(" ", "", $_POST["numero"]);
         echo '<script type="text/javascript">',
-        'search(' . $_POST["numero"] . ');',
+        'search(' . $num_arreglado . ');',
         '</script>';
     }
 } else {
