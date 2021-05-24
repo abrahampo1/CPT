@@ -38,7 +38,7 @@ use Symfony\Component\HttpClient\HttpClient;
     * {
 
         font-family: 'Montserrat', sans-serif;
-        font-size: 25px;
+        font-size: 20px;
         text-align: center;
     }
 
