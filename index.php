@@ -185,3 +185,8 @@ if (isset($_POST["numero"])) {
 
 ?>
 
+<script>
+    if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/service-worker.js');
+}
+</script>
