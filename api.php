@@ -22,8 +22,8 @@ if (isset($_POST["numero"])) {
         //var_dump($contenido_descartado);
         $fila = explode("<p>", $contenido_descartado[1]);
         $err_no_data = "Non hai ningunha recarga";
-        if (strstr($contenido_descartado[0], $err_no_data)) {
-            echo "<p class='error'>Esta tarjetiña no tiene datos :(</p>";
+        if (strstr($contenido_descartado[0], $err_no_data) || strstr($contenido_descartado[0], "Tarxeta incorrecto")) {
+            echo "<p class='error'>Esta tarxetiña non ten datos :(</p>";
             exit;
         }
 
