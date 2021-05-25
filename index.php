@@ -182,7 +182,6 @@
 </body>
 <script>
     function setkey(key) {
-        key = key.toString();
         miStorage = window.localStorage;
         localStorage.setItem('txn', key);
     }
@@ -199,7 +198,6 @@
 <script>
     function search(num) {
         setkey(num);
-        num = num.toString();
         document.getElementById("contenido").innerHTML = "<img src='loading.gif'>";
         $.ajax({
             type: 'post',
@@ -219,11 +217,10 @@
 </script>
 <?php
 if (isset($_POST["numero"])) {
-    
     if (strlen($_POST["numero"]) > 10) {
         $num_arreglado = str_replace(" ", "", $_POST["numero"]);
         echo '<script type="text/javascript">',
-        'search(' . $num_arreglado . '.toString());',
+        'search("' . $num_arreglado . '");',
         '</script>';
     }
 } else {
@@ -231,8 +228,6 @@ if (isset($_POST["numero"])) {
         <p>Esta página web no está asociada con la xunta ni con abanca. La infomación se obtiene de la xunta de galicia. CPSoftware no se hace responsable del uso indebido de esta herramienta. Todo el código es gratuito y de libre acceso en <a href="https://github.com/abrahampo1/cpt">github.com</a>.</p>
     </div>';
 }
-
-
 ?>
 
 
