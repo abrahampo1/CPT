@@ -182,7 +182,7 @@
 </body>
 <script>
     function setkey(key) {
-        key = String(key);
+        key = key.toString();
         miStorage = window.localStorage;
         localStorage.setItem('txn', key);
     }
@@ -199,7 +199,7 @@
 <script>
     function search(num) {
         setkey(num);
-        num = String(num);
+        num = num.toString();
         document.getElementById("contenido").innerHTML = "<img src='loading.gif'>";
         $.ajax({
             type: 'post',
@@ -223,7 +223,7 @@ if (isset($_POST["numero"])) {
     if (strlen($_POST["numero"]) > 10) {
         $num_arreglado = str_replace(" ", "", $_POST["numero"]);
         echo '<script type="text/javascript">',
-        'search(' . $num_arreglado . ');',
+        'search(' . $num_arreglado . '.toString());',
         '</script>';
     }
 } else {
