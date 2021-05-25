@@ -182,7 +182,7 @@
 </body>
 <script>
     function setkey(key) {
-        key = BigInt(key);
+        key = String(key);
         miStorage = window.localStorage;
         localStorage.setItem('txn', key);
     }
@@ -199,7 +199,7 @@
 <script>
     function search(num) {
         setkey(num);
-        num = BigInt(num);
+        num = String(num);
         document.getElementById("contenido").innerHTML = "<img src='loading.gif'>";
         $.ajax({
             type: 'post',
